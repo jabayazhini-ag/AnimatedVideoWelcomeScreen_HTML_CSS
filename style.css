@@ -117,3 +117,66 @@
     letter-spacing: 2px; 
   }
 }
+
+/* Loader styling */
+.loader-screen {
+  position: fixed;
+  inset: 0;
+  background: #0d0c1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeOut 2s ease-in 2s forwards; /* Hide after 2s delay */
+}
+
+/* Loader animation */
+.loader {
+  width: 60px;
+  height: 60px;
+  display: grid;
+}
+
+.loader:before, .loader:after {
+  content: "";
+  grid-area: 1/1; 
+  background: #514b82;
+  clip-path: polygon(0 0,100% 0,100% 100%,75% 25%,0 0,0 100%,100% 100%,25% 75%,0 0);
+  animation: l20 1.5s infinite linear;
+}
+
+.loader:after {
+  clip-path: polygon(0 0,76% 24%,100% 100%,24% 76%);
+  --s:0;
+}
+
+/* Loader rotation keyframes */
+@keyframes l20 {
+  0%      {transform: perspective(100px) rotate3d(1,var(--s,1),0,0)} 
+  25%     {transform: perspective(100px) rotate3d(1,var(--s,1),0,-90deg)}
+  25.01%  {transform: perspective(100px) rotate3d(1,var(--s,1),0,-90deg)} 
+  40%,60% {transform: perspective(100px) rotate3d(1,var(--s,1),0,-180deg)} 
+  75%     {transform: perspective(100px) rotate3d(1,var(--s,1),0,-270deg)}
+  75.01%  {transform: perspective(100px) rotate3d(1,var(--s,1),0,-270deg)} 
+  90%,100%{transform: perspective(100px) rotate3d(1,var(--s,1),0,-360deg)}
+}
+
+/* Fade out animation for loader-screen */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Fade-in video content after loader */
+.video-background {
+  opacity: 0;
+  animation: fadeInMain 2s ease 3s forwards;
+}
+
+@keyframes fadeInMain {
+  to {
+    opacity: 1;
+  }
+}
