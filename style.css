@@ -41,7 +41,7 @@ html, body {
   opacity: 0.8;  
 
   /* Animation for the flickering effect */
-  animation: flickerText 2.5s infinite alternate steps(1); /* Controls the flicker timing */
+  animation: flickerText 2s infinite alternate steps(1); /* Controls the flicker timing */
   will-change: color, -webkit-text-stroke; /* Performance hint */
 }
 
@@ -86,7 +86,6 @@ html, body {
 
   .content h1 {
     font-size: 100px; 
-    animation-duration: 2.3s; /* Faster flicker on smaller screens */   
   }
 }
 
@@ -101,7 +100,6 @@ html, body {
 
   .content h1 {
     font-size: 80px; 
-    animation-duration: 2s; /* Faster flicker on smaller screens */   
   }
 }
 
@@ -118,7 +116,6 @@ html, body {
     font-size: 46px;
     font-weight: 700; 
     text-shadow: 1px 1px 2px rgba(244, 238, 238, 0.732); 
-    animation-duration: 1.9s; /* Even faster flicker on mobile */
     letter-spacing: 1.2px; 
   }
 }
