@@ -81,7 +81,7 @@
 
   .content h1 {
     font-size: 100px; 
-    animation-duration: 1.7s; /* Faster flicker on smaller screens */   
+    animation-duration: 2.3s; /* Faster flicker on smaller screens */   
   }
 }
 
@@ -96,7 +96,7 @@
 
   .content h1 {
     font-size: 80px; 
-    animation-duration: 1.5s; /* Faster flicker on smaller screens */   
+    animation-duration: 2s; /* Faster flicker on smaller screens */   
   }
 }
 
@@ -110,11 +110,11 @@
   }
 
   .content h1 {
-    font-size: 50px;
+    font-size: 46px;
     font-weight: 700; 
     text-shadow: 1px 1px 2px rgba(244, 238, 238, 0.732); 
-    animation-duration: 1s; /* Even faster flicker on mobile */
-    letter-spacing: 2px; 
+    animation-duration: 1.9s; /* Even faster flicker on mobile */
+    letter-spacing: 1.2px; 
   }
 }
 
