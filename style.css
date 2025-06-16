@@ -36,7 +36,7 @@
   opacity: 0.8;  
 
   /* Animation for the flickering effect */
-  animation: flickerText 2.5s infinite alternate steps(1); /* Controls the flicker timing */
+  animation: flickerText 2s infinite alternate steps(1); /* Controls the flicker timing */
   will-change: color, -webkit-text-stroke; /* Performance hint */
 }
 
@@ -81,7 +81,7 @@
 
   .content h1 {
     font-size: 100px; 
-    animation-duration: 2s; /* Faster flicker on smaller screens */   
+    animation-duration: 1.7s; /* Faster flicker on smaller screens */   
   }
 }
 
